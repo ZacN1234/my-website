@@ -650,6 +650,67 @@
         }
 
         /* Contact */
+        #contact {
+            background: var(--bg-card);
+            border-top: 1px solid var(--accent);
+            border-bottom: 1px solid var(--accent);
+            position: relative;
+        }
+
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center top, var(--accent-glow) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .contact-direct {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-direct a {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 1.8rem;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 12px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contact-direct a:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .contact-direct .contact-icon {
+            font-size: 1.3rem;
+        }
+
+        .contact-divider {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
         .contact-content {
             max-width: 550px;
             margin: 0 auto;
@@ -664,7 +725,7 @@
         .contact-form input,
         .contact-form textarea {
             padding: 0.9rem 1.15rem;
-            background: var(--bg-card);
+            background: #09090b;
             border: 1px solid var(--border);
             border-radius: 10px;
             color: var(--text-primary);
@@ -690,16 +751,7 @@
         }
 
         .contact-email {
-            text-align: center;
-            margin-top: 2rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .contact-email a {
-            color: var(--accent-hover);
-            text-decoration: none;
-            font-weight: 500;
+            display: none;
         }
 
         /* Footer */
@@ -1070,6 +1122,19 @@
                 <h2>Get your free website review in 24 hours</h2>
                 <p>Drop your details below. I'll personally review your site and send you a breakdown of what I'd improve — completely free, no strings attached.</p>
             </div>
+            <div class="contact-direct">
+                <a href="tel:0401102666">
+                    <span class="contact-icon">&#128222;</span>
+                    0401 102 666
+                </a>
+                <a href="mailto:zacmanzacmanoz@gmail.com">
+                    <span class="contact-icon">&#9993;</span>
+                    zacmanzacmanoz@gmail.com
+                </a>
+            </div>
+
+            <p class="contact-divider">&mdash; or send me a message &mdash;</p>
+
             <div class="contact-content">
                 <form class="contact-form" action="https://formsubmit.co/zacmanzacmanoz@gmail.com" method="POST">
                     <input type="hidden" name="_subject" value="New website enquiry">
